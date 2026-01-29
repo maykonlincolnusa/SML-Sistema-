@@ -4,6 +4,9 @@ Sentinela — Sistema de Segurança Inteligente
 
 
 
+
+---
+
 Objetivos
 
 Fornecer um pipeline confiável e escalável para ingestão e análise de dados multimodais (câmeras, microfones, sensores, drones).
@@ -15,6 +18,8 @@ Permitir deploy inicial com soluções gratuitas/low-cost e escalar para infraes
 Garantir princípios de privacidade, segurança e auditoria.
 
 
+
+---
 
 Principais funcionalidades
 
@@ -36,6 +41,7 @@ Pipeline de dados para armazenamento, auditoria e modelagem (Data Lake / Data Wa
 
 
 
+---
 
 Arquitetura (visão geral)
 
@@ -74,6 +80,7 @@ Fluxo simplificado:
 Edge -> Gateway de Ingestão -> Message Bus -> Processing -> Orquestração (n8n) -> API/Dashboard/Autoridades
 
 
+---
 
 Tecnologias sugeridas
 
@@ -94,6 +101,7 @@ Containerização: Docker, orquestração Kubernetes
 Infra as Code: Terraform (recomendado)
 
 
+---
 
 Variáveis de ambiente (exemplos)
 
@@ -109,7 +117,7 @@ JWT_SECRET=trocar_por_valor_secreto
 
 
 
-
+---
 
 Deploy em cloud (resumo)
 
@@ -137,7 +145,7 @@ AWS (exemplo resumido):
 Observação: para comunicação via satélite, integre gateways físicos/SDR e um módulo que encapsule pacotes (VPN/DTN) e envie para servidor core quando houver link.
 
 
-
+---
 
 Integração com n8n (padrões)
 
@@ -147,7 +155,12 @@ Fluxos típicos:
 
 Triagem -> validar evento -> enrich com metadata -> push para tópico de notificação -> notificar equipe via WhatsApp/Telegram/Push
 
+Escalonamento -> quando regra X, abrir chamado e enviar para autoridade
 
+
+
+
+---
 
 Privacidade, Segurança e Compliance
 
@@ -163,6 +176,7 @@ Transparência: logs e checkpoints para auditoria e possibilidade de revisão ma
 
 
 
+---
 
 Roadmap (prioridades sugeridas)
 
@@ -205,6 +219,7 @@ Modelo SaaS para vender como solução integrada para cidades/regiões.
 
 
 
+---
 
 Estrutura recomendada do repositório
 
@@ -223,7 +238,7 @@ Sentinela/
 └── /scripts             # utilitários de deploy e manutenção
 
 
-
+---
 
 Como contribuir
 
@@ -241,7 +256,7 @@ Como contribuir
 
 
 
-
+---
 
 Responsabilidade Ética
 
@@ -255,7 +270,7 @@ Garantir canais de denúncia e revisão humana em decisões críticas.
 
 
 
-
+---
 
 Contato
 
